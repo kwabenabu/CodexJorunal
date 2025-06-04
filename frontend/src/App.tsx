@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 
 // Create a theme instance
 const theme = createTheme({
@@ -21,7 +23,8 @@ function App() {
       <CssBaseline />
       <Router>
         <Routes>
-          <Route path="/" element={<div>Welcome to Codex Journal</div>} />
+          <Route path="/" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </Router>
     </ThemeProvider>
